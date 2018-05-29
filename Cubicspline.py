@@ -52,6 +52,7 @@ def coeBCD(n, a, h):
 #########################################
 
 def retDisplay(n, x, a, b, c, d):
+    print('')
     print('j'.rjust(3), 'x'.rjust(10), 'a'.rjust(15), 'b'.rjust(15), 'c'.rjust(15), 'd'.rjust(15))
     print('------------------------------------------------------------------------------')
     for i in range(0, n):
@@ -82,7 +83,7 @@ def saveFigure(n, x, a, b, c, d, title):
         plt.plot(xx, y)
     # plt.show()
     plt.savefig(title)
-    print('Figure saved!!')
+    print('\nFigure saved!!\n------------------------------------------------------------------------------\n')
 
 #########################################
 
@@ -90,3 +91,8 @@ def predictValue(xx, x, a, b, c, d):
     tmp = xx - x
 
     return a + b * tmp + c * pow(tmp, 2) + d * pow(tmp, 3)
+
+#########################################
+
+def relatErr(pred_v, real_v):
+    return abs((pred_v - real_v) / pred_v)
