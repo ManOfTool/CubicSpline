@@ -13,9 +13,7 @@ b, c, d = coeBCD(n, a, h)
 retDisplay(n, x, a, b, c, d)
 saveFigure(n, x, a, b, c, d, 'q1_2.png')
 
-xx = float(input('Enter value to predict: '))
-
+xx = float(input('Predict the position of the car when x = '))
 l_most = getInterval(xx, n, x)
 value = predictValue(xx, x[l_most], a[l_most], b[l_most], c[l_most], d[l_most])
-
 print('When x = {}, S(x) = {}'.format(xx, value))
