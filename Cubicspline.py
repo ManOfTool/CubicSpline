@@ -1,3 +1,6 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
 ROUNDING = 6
 
 def enterNodes(n):
@@ -66,6 +69,22 @@ def getInterval(xx, n, x):
             print('{} is in interval [{}, {}]'.format(xx, x[i], x[i+1]))
 
     return i
+
+#########################################
+
+def saveFigure(n, x, a, b, c, d, title):
+    # plt.figure(figsize = (20, 2))
+    for i in range(0, n):
+        xx = np.arange(x[i], x[i + 1], 0.0002)
+        tmp = xx - x[i]
+        y = a[i] + b[i] * tmp + c[i] * pow(tmp, 2) + d[i] * pow(tmp, 3)
+
+        plt.plot(xx, y)
+    # plt.show()
+    plt.savefig(title)
+    print('Figure saved!!')
+
+#########################################
 
 def predictValue(xx, x, a, b, c, d):
     tmp = xx - x

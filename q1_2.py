@@ -2,6 +2,7 @@ from Cubicspline import *
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 n = int(input('Value of n = '))
 
 x, fx, h = enterNodes(n)
@@ -10,6 +11,7 @@ a = fx
 b, c, d = coeBCD(n, a, h)
 
 retDisplay(n, x, a, b, c, d)
+saveFigure(n, x, a, b, c, d, 'q1_2.png')
 
 xx = float(input('Enter value to predict: '))
 
