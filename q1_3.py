@@ -21,7 +21,7 @@ b, c, d = coeBCD(n, a, h)
 retDisplay(n, x, a, b, c, d)
 saveFigure(n, x, a, b, c, d, 'q1_3.png')
 
-xx = int(input('Use the natural cubic spline interpolation to predict the populations in: '))
+xx = int(input('Predict the populations in: '))
 l_most = getInterval(xx, n, x)
 value = predictValue(xx, x[l_most], a[l_most], b[l_most], c[l_most], d[l_most])
 print('When x = {}, S(x) = {}\n'.format(xx, round(value)))
