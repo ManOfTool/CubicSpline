@@ -1,7 +1,7 @@
 from Cubicspline import *
 import math
 
-n = 81
+n = int(input('Value of n: '))
 
 t = []
 x = []
@@ -43,4 +43,6 @@ for i in range(0, n):
 
     plt.plot(xx, yy)
 
-plt.savefig('q8.png')
+title = input('Enter graph name: ') + '.png'
+plt.savefig(title)
+print('\nFigure ' + title + ' saved!!\n------------------------------------------------------------------------------')
