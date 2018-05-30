@@ -52,7 +52,6 @@ def coeBCD(n, a, h):
 #########################################
 
 def retDisplay(n, x, a, b, c, d):
-    print('')
     print('j'.rjust(3), 'x'.rjust(10), 'a'.rjust(15), 'b'.rjust(15), 'c'.rjust(15), 'd'.rjust(15))
     print('------------------------------------------------------------------------------')
     for i in range(0, n):
@@ -74,7 +73,6 @@ def getInterval(xx, n, x):
 #########################################
 
 def saveFigure(n, x, a, b, c, d, title):
-    # plt.figure(figsize = (20, 2))
     for i in range(0, n):
         xx = np.arange(x[i], x[i + 1], 0.0002)
         tmp = xx - x[i]
@@ -83,7 +81,7 @@ def saveFigure(n, x, a, b, c, d, title):
         plt.plot(xx, y)
     # plt.show()
     plt.savefig(title)
-    print('\nFigure ' + title + ' saved!!\n------------------------------------------------------------------------------\n')
+    print('\nFigure ' + title + ' saved!!\n------------------------------------------------------------------------------')
 
 #########################################
 
