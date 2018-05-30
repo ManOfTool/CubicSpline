@@ -51,11 +51,13 @@ def coeBCD(n, a, h):
 
 #########################################
 
-def retDisplay(n, x, a, b, c, d):
-    print('j'.rjust(3), 'x'.rjust(10), 'a'.rjust(15), 'b'.rjust(15), 'c'.rjust(15), 'd'.rjust(15))
-    print('------------------------------------------------------------------------------')
+def retDisplay(n, x, a, b, c, d, f):
+    # print('j'.rjust(3), 'x'.rjust(10), 'a'.rjust(15), 'b'.rjust(15), 'c'.rjust(15), 'd'.rjust(15))
+    f.write('j'.rjust(3)+'x'.rjust(10)+'a'.rjust(15)+'b'.rjust(15)+'c'.rjust(15)+'d'.rjust(15))
+    f.write('\n------------------------------------------------------------------------------\n')
     for i in range(0, n):
-            print(repr(i).rjust(3), repr(x[i]).rjust(10), repr(a[i]).rjust(15), repr(b[i]).rjust(15), repr(c[i]).rjust(15), repr(d[i]).rjust(15))
+            f.write(repr(i).rjust(3)+repr(x[i]).rjust(10)+repr(a[i]).rjust(15)+repr(b[i]).rjust(15)+repr(c[i]).rjust(15)+repr(d[i]).rjust(15))
+            f.write('\n')
 
 #########################################
 

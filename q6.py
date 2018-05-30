@@ -16,12 +16,12 @@ b1, c1, d1 = coeBCD(n, a1, h)
 a2 = y
 b2, c2, d2 = coeBCD(n, a2, h)
 
-print('Coefficient of Sx(t):')
-retDisplay(n, t, a1, b1, c1, d1)
+# print('Coefficient of Sx(t):')
 
-print('')
-print('Coefficient of Sy(t):')
-retDisplay(n, t, a2, b2, c2, d2)
+# print('Coefficient of Sy(t):')
+with open('q6.txt', 'a') as f:
+    retDisplay(n, t, a1, b1, c1, d1, f)
+    retDisplay(n, t, a2, b2, c2, d2, f)
 
 for i in range(0, n):
     tt = np.arange(t[i], t[i+1], 0.0002)

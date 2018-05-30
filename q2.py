@@ -10,7 +10,9 @@ x, fx, h = enterNodes(n)
 a = fx
 b, c, d = coeBCD(n, a, h)
 
-retDisplay(n, x, a, b, c, d)
+with open('q2.txt', 'a') as f:
+    retDisplay(n, x, a, b, c, d, f)
+
 saveFigure(n, x, a, b, c, d, 'q1_2.png')
 
 xx = float(input('Predict the position of the car when x = '))

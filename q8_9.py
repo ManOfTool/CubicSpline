@@ -27,12 +27,14 @@ b1, c1, d1 = coeBCD(n, a1, h)
 a2 = y
 b2, c2, d2 = coeBCD(n, a2, h)
 
-print('Coefficient of Sx(t):')
-retDisplay(n, t, a1, b1, c1, d1)
+f_name = input('Enter file name: ')
+with open(f_name + '.txt', 'a') as f:
+    # print('Coefficient of Sx(t):')
+    retDisplay(n, t, a1, b1, c1, d1, f)
 
-print('')
-print('Coefficient of Sy(t):')
-retDisplay(n, t, a2, b2, c2, d2)
+    # print('')
+    # print('Coefficient of Sy(t):')
+    retDisplay(n, t, a2, b2, c2, d2, f)
 
 for i in range(0, n):
     tt = np.arange(t[i], t[i+1], 0.0002)
@@ -43,6 +45,6 @@ for i in range(0, n):
 
     plt.plot(xx, yy)
 
-title = input('Enter graph name: ') + '.png'
-plt.savefig(title)
-print('\nFigure ' + title + ' saved!!\n------------------------------------------------------------------------------')
+# title = input('Enter graph name: ') + '.png'
+plt.savefig(f_name + '.png')
+print('\nFigure ' + f_name + '.png' + ' saved!!\n------------------------------------------------------------------------------')

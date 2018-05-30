@@ -18,7 +18,9 @@ for j in range(0, n):
 a = fx
 b, c, d = coeBCD(n, a, h)
 
-retDisplay(n, x, a, b, c, d)
+with open('q3.txt', 'a') as f:
+    retDisplay(n, x, a, b, c, d, f)
+
 saveFigure(n, x, a, b, c, d, 'q1_3.png')
 
 xx = int(input('Predict the populations in: '))

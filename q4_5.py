@@ -1,13 +1,14 @@
 from Cubicspline import *
 
-n = int(input('Value of n: '))
+nn = int(input('Value of n: '))
+n = 10
 
 x = []
 fx = []
 h = []
 
 for i in range(0, n+1):
-    xx = round(-2 + (4 / n) * i, 6)
+    xx = round(-2 + (4 / nn) * i, 6)
     fxx = round(1 / (1 + 25 * pow(xx, 2)), 6)
 
     x.append(xx)
@@ -20,7 +21,8 @@ a = fx
 
 b, c, d = coeBCD(n, a, h)
 
-retDisplay(n, x, a, b, c, d)
+f_name = input('Enter file name: ')
+with open(f_name + '.txt', 'a') as f:
+    retDisplay(n, x, a, b, c, d, f)
 
-title = input('Enter graph name: ') + '.png'
-saveFigure(n, x, a, b, c, d, title)
+saveFigure(n, x, a, b, c, d, f_name + '.png')
